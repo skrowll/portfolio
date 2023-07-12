@@ -1,0 +1,12 @@
+export { default as LogoWhite } from './Logo-white.svg';
+// export { default as LogoCyan } from './Logo-cyan.svg';
+export { default as LogoCyan } from './Logo-yellow.svg';
+export { default as LogoMagenta } from './Logo-magenta.svg';
+export { default as Pattern } from './Pattern.svg';
+export { default as DownloadIcon } from './Download-icon.svg';
+export { default as LinkedinIcon } from './Linkedin-icon.svg';
+export { default as GithubIcon } from './Github-icon.svg';
+export { default as MenuIcon } from './Menu-hamburger.svg';
+export { default as EyeIcon } from './Eye-icon.svg';
+export { default as CodeIcon } from './Code-icon.svg';
+export { default as HeartSkrowll } from './Heart-skrowll.svg';

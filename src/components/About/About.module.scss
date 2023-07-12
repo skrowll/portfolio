@@ -1,0 +1,225 @@
+.about {
+  
+  position: relative;
+  display: flex;
+  height: calc(100vh - 40px - 2rem);
+  background-color: var(--black);
+  padding: 0 10vw;
+
+  @media only screen and (max-width: 600px) {
+    padding-inline: 5vw;
+    height: 100%;
+  }
+
+  .background {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--gray);
+    mask-image: url(../../../public/pattern.png);
+    opacity: .45;
+  }
+
+  .foreground {
+    
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    @media only screen and (max-width: 600px) {
+      
+      padding-inline: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      
+      position: absolute;
+      font-family: Roboto Mono, monospace;
+      font-weight: bold;
+      font-size: larger;
+      padding-top: 1rem;
+      color: var(--yellow);
+
+      @media only screen and (max-width: 600px) {
+        
+        left: 0;
+      }
+
+      span {
+        
+        color: var(--pink);
+      }
+    }
+
+    .image_container {
+      
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      @media only screen and (max-width: 600px) {
+        
+        width: 100%;
+        margin-top: 3rem;
+      }
+
+      .color_img {
+        
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 1/1;
+
+        background-image: url(../../../public/profile-photo-about.png);
+        background-size: cover;
+        background-position: center;
+
+        mask-image: url(../../../public/mask.png);
+        -webkit-mask-image: url(../../../public/mask.png);
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        mask-position: 0% 0%;
+        -webkit-mask-position: 0% 0%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .text_container {
+      
+      width: 50%;
+      padding: 3rem;
+
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        background: var(--black-30);
+        box-shadow: 0 8px 32px 0 var(--white-10);
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+
+        h2 {
+          color: var(--yellow);
+          font-size: 1.5rem;
+          font-weight: bold;
+          padding-top: 1.5rem;
+        }
+
+        .tabs {
+          display: flex;
+          justify-content: center;
+
+          @media only screen and (max-width: 600px) {
+            width: 100%;
+          }
+
+          button {
+            background-color: transparent;
+            color: var(--white-90);
+            border: none;
+            outline: none;
+            padding: 1rem 2.5rem .5rem 2.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 2px 2px 0 2px;
+
+            @media only screen and (max-width: 600px) {
+              padding: .5rem 1rem .5rem 1rem;
+              font-size: 1rem;
+            }
+      
+            &:hover:not(.active) {
+              color: var(--white);
+            }
+          }
+
+          .active {
+            color: var(--pink);
+            border-bottom: solid 3px var(--pink);
+          }
+        }
+
+        .content {
+          width: 90%;
+          height: 100%;
+          margin-bottom: 2rem;
+          overflow-y: scroll;
+
+          @media only screen and (max-width: 600px) {
+            margin-bottom: 4rem;
+          }
+
+          hr {
+            margin-top: 1rem;
+            border: 1px solid var(--yellow);
+          }
+
+          p {
+            color: var(--white);
+            font-family: Roboto Mono, monospace;
+            margin-top: 1rem;
+            padding-inline: 1rem;
+            letter-spacing: .1rem;
+            line-height: 1.2;
+            text-align: justify;
+
+            span {
+              letter-spacing: -.1rem;
+            }
+
+            strong {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes paiting {
+  0% {
+    mask-position: 0% 0%;
+    -webkit-mask-position: 0% 0%;
+  }
+
+  100% {
+    mask-position: 100% 0%;
+    -webkit-mask-position: 100% 0%;
+  }
+}
+
+@-webkit-keyframes paiting {
+  0% {
+    mask-position: 0% 0%;
+    -webkit-mask-position: 0% 0%;
+  }
+
+  100% {
+    mask-position: 100% 0%;
+    -webkit-mask-position: 100% 0%;
+  }
+}
